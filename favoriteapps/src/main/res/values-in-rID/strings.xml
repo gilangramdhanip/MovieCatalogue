@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Katalog Film</string>
+    <string name="tab_text_1">Film</string>
+    <string name="tab_text_2">Acara Tv </string>
+    <string name="language">id</string>
+    <string name="text_deleted">Favorit Berhasil dihapus</string>
+    <string name="read_more">BACA LEBIH BANYAK</string>
+</resources>

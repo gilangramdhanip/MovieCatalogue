@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Movie Catalogue</string>
+    <string name="tab_text_1">Movies</string>
+    <string name="tab_text_2">TV Show</string>
+    <string name="language">en-US</string>
+    <string name="movie_name" translatable="false">Name</string>
+    <string name="movie_desc" translatable="false">Desc</string>
+    <string name="frist_air_date" translatable="false">First Air Date</string>
+    <string name="img_desc" translatable="false"> ImageView</string>
+    <string name="text_deleted">Favorit successfully deleted</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="read_more">READ MORE</string>
+</resources>

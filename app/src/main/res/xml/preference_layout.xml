@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:iconSpaceReserved="false">
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="@string/key_daily"
+        android:title="@string/is_daily"
+        app:iconSpaceReserved="false" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="@string/key_today_release"
+        android:title="@string/is_today_release"
+        app:iconSpaceReserved="false" />
+</PreferenceScreen>

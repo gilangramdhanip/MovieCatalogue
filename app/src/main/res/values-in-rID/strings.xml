@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Katalog Film</string>
+    <string name="tab_text_1">Film</string>
+    <string name="tab_text_2">Acara Tv </string>
+    <string name="change_language_setting">Ubah Pengaturan Bahasa</string>
+    <string name="language">id</string>
+    <string name="text_success">Favorit Berhasil ditambahkan</string>
+    <string name="text_deleted">Favorit Berhasil dihapus</string>
+    <string name="fav_text">Peringkat</string>
+    <string name="search_hint"> Cari disini..</string>
+    <string name="content_title">Katalog Film</string>
+    <string name="content_text">Hai, yuk kembali ke aplikasi </string>
+    <string name="empty_text">TIDAK ADA DATA</string>
+    <string name="key_daily">Harian</string>
+    <string name="key_today_release">hari ini</string>
+    <string name="is_daily">Pengingat Harian</string>
+    <string name="is_today_release">Notifikasi Rilis Harian</string>
+    <string name="notif_title">Kami Merindukanmu !</string>
+    <string name="notif_content">Yuk Kembali ke Katalog Film</string>
+    <string name="release_content">Rilis hari ini! Yuk tonton Sekarang</string>
+    <string name="is_released">yang dirilis</string>
+    <string name="released_today">Film baru yang dirilis</string>
+</resources>
