@@ -93,20 +93,20 @@ class TvShowFragment : Fragment() {
         searchView.queryHint = resources.getString(R.string.search_hint)
         searchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
-//                SearchTvShowFragment.EXTRA_QUERY = query!!
-//                fragmentManager?.beginTransaction()
-//                    ?.replace(R.id.tvshow_rl, SearchTvShowFragment())?.commit()
-//
-//                rv_heroes2.visibility = View.GONE
+                SearchTvShowFragment.EXTRA_QUERY = query!!
+                fragmentManager?.beginTransaction()
+                    ?.replace(R.id.tvshow_rl, SearchTvShowFragment())?.commit()
 
-                showAdapter.filter.filter(query)
+                rv_heroes2.visibility = View.GONE
+
+//                showAdapter.filter.filter(query)
 
                 return false
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
 
-                showAdapter.filter.filter(newText)
+//                showAdapter.filter.filter(newText)
                 return false
             }
         })

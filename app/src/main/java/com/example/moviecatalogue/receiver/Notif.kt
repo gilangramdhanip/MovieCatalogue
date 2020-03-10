@@ -70,8 +70,8 @@ class Notif : BroadcastReceiver() {
         val putExtra = intent.putExtra(EXTRA_TYPE, type)
 
         val calendar = Calendar.getInstance()
-        calendar.set(Calendar.HOUR_OF_DAY, 7)
-        calendar.set(Calendar.MINUTE, 0)
+        calendar.set(Calendar.HOUR_OF_DAY, 0)
+        calendar.set(Calendar.MINUTE, 2)
         calendar.set(Calendar.SECOND, 0)
 
         val pendingIntent = PendingIntent.getBroadcast(context, ID_REMINDER, intent, 0)
@@ -84,8 +84,8 @@ class Notif : BroadcastReceiver() {
         intent.putExtra(EXTRA_TYPE, type)
 
         val calendar = Calendar.getInstance()
-        calendar.set(Calendar.HOUR_OF_DAY, 8)
-        calendar.set(Calendar.MINUTE, 0)
+        calendar.set(Calendar.HOUR_OF_DAY, 0)
+        calendar.set(Calendar.MINUTE, 2)
         calendar.set(Calendar.SECOND, 0)
 
         val pendingIntent = PendingIntent.getBroadcast(context, ID_TODAY_RELEASE, intent, 0)
@@ -138,6 +138,8 @@ class Notif : BroadcastReceiver() {
                 .setContentText(notifRelease[todayNotifId].desc)
                 .setGroup(GROUP_KEY_DAILY_RELEASE)
                 .setContentIntent(pendingIntent)
+                .setSmallIcon(R.drawable.bell)
+                .setLargeIcon(BitmapFactory.decodeResource(context.resources, R.drawable.bell))
                 .setAutoCancel(true)
         }else{
             val inboxStyle = NotificationCompat.InboxStyle()
@@ -148,6 +150,8 @@ class Notif : BroadcastReceiver() {
                 .setContentTitle("$todayNotifId new movie released")
                 .setGroup(GROUP_KEY_DAILY_RELEASE)
                 .setGroupSummary(true)
+                .setSmallIcon(R.drawable.bell)
+                .setLargeIcon(BitmapFactory.decodeResource(context.resources, R.drawable.bell))
                 .setContentIntent(pendingIntent)
                 .setStyle(inboxStyle)
                 .setAutoCancel(true)
@@ -175,6 +179,8 @@ class Notif : BroadcastReceiver() {
             .setContentTitle(context.resources.getString(R.string.notif_title))
             .setContentText(context.resources.getString(R.string.notif_content))
             .setAutoCancel(true)
+            .setSmallIcon(R.drawable.bell)
+            .setLargeIcon(BitmapFactory.decodeResource(context.resources, R.drawable.bell))
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             val channel = NotificationChannel(

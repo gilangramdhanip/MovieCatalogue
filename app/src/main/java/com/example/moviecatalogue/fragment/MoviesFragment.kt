@@ -96,13 +96,17 @@ class MoviesFragment : Fragment() {
         searchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
 
-                moviesAdapter.filter.filter(query)
+                SearchMovieFragment.EXTRA_QUERY = query!!
+                fragmentManager?.beginTransaction()
+                    ?.replace(R.id.movies_rl, SearchMovieFragment())?.commit()
+
+                rv_heroes.visibility = View.GONE
 
                 return true
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                moviesAdapter.filter.filter(newText)
+//                moviesAdapter.filter.filter(newText)
                 return false
             }
         })

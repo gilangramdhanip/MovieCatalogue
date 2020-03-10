@@ -24,7 +24,7 @@
             android:writePermission="com.example.moviecatalogue.WRITE_DATABASE" >
             </provider>
 
-        <service
+        <receiver
             android:name=".receiver.Notif"
             android:enabled="true"
             android:exported="true" />
