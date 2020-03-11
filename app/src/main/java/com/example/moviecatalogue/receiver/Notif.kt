@@ -53,11 +53,12 @@ class Notif : BroadcastReceiver() {
 
         when(type){
             TYPE_DAILY_REMINDER ->{
-                dailyReleaseNotification(context, notifId)
+                dailyNotification(context, notifId)
             }
 
             TYPE_TODAY_RELEASE ->{
-                dailyNotification(context, notifId)
+
+                dailyReleaseNotification(context, notifId)
             }
         }
 
@@ -70,8 +71,8 @@ class Notif : BroadcastReceiver() {
         val putExtra = intent.putExtra(EXTRA_TYPE, type)
 
         val calendar = Calendar.getInstance()
-        calendar.set(Calendar.HOUR_OF_DAY, 0)
-        calendar.set(Calendar.MINUTE, 2)
+        calendar.set(Calendar.HOUR_OF_DAY, 7)
+        calendar.set(Calendar.MINUTE, 0)
         calendar.set(Calendar.SECOND, 0)
 
         val pendingIntent = PendingIntent.getBroadcast(context, ID_REMINDER, intent, 0)
@@ -84,8 +85,8 @@ class Notif : BroadcastReceiver() {
         intent.putExtra(EXTRA_TYPE, type)
 
         val calendar = Calendar.getInstance()
-        calendar.set(Calendar.HOUR_OF_DAY, 0)
-        calendar.set(Calendar.MINUTE, 2)
+        calendar.set(Calendar.HOUR_OF_DAY, 8)
+        calendar.set(Calendar.MINUTE, 0)
         calendar.set(Calendar.SECOND, 0)
 
         val pendingIntent = PendingIntent.getBroadcast(context, ID_TODAY_RELEASE, intent, 0)
