@@ -42,7 +42,6 @@ class Notif : BroadcastReceiver() {
         private const val GROUP_KEY_DAILY_RELEASE = "group_key_daily_release"
         private const val ID_REMINDER = 100
         private const val ID_TODAY_RELEASE = 101
-
     }
 
     override fun onReceive(context: Context, intent: Intent) {
